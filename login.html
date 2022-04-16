@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link href="./main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <span class="login-notice">로그인 또는 회원가입</span>
+        <img src="./images/close.svg" />
+      </header>
+      <hr style="border: 1px solid white; background-color: #c4c4c4" />
+      <section class="internal-login">
+        <p class="welcom-phrase">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+
+        <p><input placeholder="아이디" type="text" class="idpw" /></p>
+        <p><input placeholder="비밀번호" type="password" class="idpw" /></p>
+        <p class="login-maintain">
+          <img id="img1" src="./images/check-box.svg" />
+          <img id="img2" src="./images/checked-box.svg" />
+          로그인 상태유지
+        </p>
+
+        <a href="#" class="small-loginbtn">로그인</a>
+      </section>
+      <div class="member-link">
+        <a href="#" class="signup">회원가입</a>
+        <a href="#" class="find-id-pw">아이디/비밀번호 찾기</a>
+      </div>
+
+      <section class="external-login">
+        <div class="or-txt">또는</div>
+        <a href="http://www.google.com" class="portal btn1"
+          >구글 계정으로 로그인
+        </a>
+        <a href="http://www.facebook.com" class="portal btn2"
+          >페이스북 계정으로 로그인</a
+        >
+        <a href="http://www.naver.com" class="portal btn3"
+          >네이버 계정으로 로그인
+        </a>
+        <a href="http://www.kakaotalk.com" class="portal btn4">
+          카카오톡 계정으로 로그인
+        </a>
+      </section>
+    </main>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#img1").show();
+      $("#img2").hide();
+
+      $("#img1").click(function () {
+        $("#img1").hide();
+        $("#img2").show();
+      });
+      $("#img2").click(function () {
+        $("#img1").show();
+        $("#img2").hide();
+      });
+    });
+  </script>
+</html>
